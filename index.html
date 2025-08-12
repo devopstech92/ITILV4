@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITIL 4 ITSM Cheat Sheet – Master Your Exam & Interviews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+      color: #2c3e50;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8em;
+      color: #002147;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    header p {
+      font-size: 1.3em;
+      color: #005792;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      background: #e74c3c;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 10px 25px;
+      border-radius: 50px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+    }
+
+    /* Product Section */
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      margin: 50px 0;
+    }
+
+    .product-image {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      border: 4px solid white;
+    }
+
+    .product-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-info h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003366;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 2em;
+      font-weight: 700;
+      color: #e74c3c;
+      margin: 15px 0;
+    }
+
+    .price del {
+      color: #7f8c8d;
+      font-size: 1.2em;
+      margin-left: 10px;
+    }
+
+    .save-text {
+      color: #27ae60;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+
+    .cta-buttons {
+      margin: 25px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.2em;
+      padding: 14px 30px;
+      margin: 10px 10px 10px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-paypal {
+      background: #003087;
+      color: white;
+    }
+
+    .btn-kofi {
+      background: #ff5f5f;
+      color: white;
+    }
+
+    /* What's Inside */
+    .contents {
+      margin: 80px 0;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .contents h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .contents ul {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    .contents li {
+      margin: 16px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .contents li::before {
+      content: "✓";
+      color: #27ae60;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px 20px;
+      color: #7f8c8d;
+      font-size: 0.9em;
+      border-top: 1px solid #ddd;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    .disclaimer {
+      font-size: 0.85em;
+      color: #95a5a6;
+      max-width: 800px;
+      margin: 20px auto;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>ITIL 4 ITSM Mastery Cheat Sheet</h1>
+      <p>Your Ultimate 10-Page Guide to Ace the Exam & Land Your ITSM Job</p>
+      <div class="badge">
+        🌊 LIMITED TIME OFFER: Only 100 Copies at $12.99!
+      </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product">
+      <div class="product-image">
+        <img src="123.jpg"/>
+        <!-- Replace 'cover.jpg' with your actual cover image filename or URL -->
+      </div>
+      <div class="product-info">
+        <h2>What You’ll Get</h2>
+        <p>Instant access to a beautifully designed, expert-curated <strong>10-page ITIL 4 ITSM cheat sheet + cover</strong> — perfect for:</p>
+        <ul>
+          <li>ITIL 4 Foundation Exam Prep</li>
+          <li>ITSM Job Interviews</li>
+          <li>Quick Reference for Practitioners</li>
+        </ul>
+
+        <div class="price">
+          $12.99 <del>$19.99</del>
+        </div>
+        <p class="save-text">🎉 Save 35% – But Only for the First 100 Buyers!</p>
+
+        <p><strong>✅ Instant Digital Download (PDF)</strong><br>
+           <strong>✅ Print-Ready • A4 </strong><br>
+           <strong>✅ 100% Satisfaction Guaranteed</strong></p>
+
+        <div class="cta-buttons">
+          <a href="https://www.paypal.com/ncp/payment/E4Y8XXA2Z9BB6" target="_blank" class="btn btn-paypal">
+            <i class="fab fa-paypal"></i> Pay with PayPal
+          </a>
+          <a href="https://ko-fi.com/s/1262e3497d" target="_blank" class="btn btn-kofi">
+            <i class="fas fa-coffee"></i> Support on Ko-fi
+          </a>
+        </div>
+
+        <p><em>🔒 Secure payment • No spam • Download instantly</em></p>
+      </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="contents">
+      <h2>📘 What’s Inside the Cheat Sheet?</h2>
+      <ul>
+        <li><strong>ITIL 4 Overview</strong> – Key concepts, value, outputs vs outcomes, v3 vs v4</li>
+        <li><strong>Service Value System (SVS)</strong> – All 5 components explained</li>
+        <li><strong>7 Guiding Principles</strong> – With real-world examples and mnemonic</li>
+        <li><strong>Four Dimensions Model</strong> – Organizations, Info & Tech, Partners, Value Streams</li>
+        <li><strong>Service Value Chain (6 Activities)</strong> – Plan, Improve, Engage, Design, Obtain, Deliver</li>
+        <li><strong>34 ITIL Practices</strong> – Categorized and ranked by importance</li>
+        <li><strong>Deep Dives</strong> – Incident, Problem, Change, SLA, Knowledge, Monitoring & more</li>
+        <li><strong>Continual Improvement</strong> – 8-step model + PDCA</li>
+        <li><strong>Exam Tips & Top Interview Questions</strong> – With model answers</li>
+        <li><strong>Acronyms, Glossary & Resources</strong> – SLA, OLA, UC, CMDB, MTTR, CAB, etc.</li>
+        <li><strong>Professional Cover Page</strong> – Ready for printing or digital sharing</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 [https://ko-fi.com/devopstech]. All rights reserved.</p>
+      <p>ITIL® is a registered trademark of AXELOS Limited. This product is not affiliated with AXELOS.</p>
+      <div class="disclaimer">
+        This is a digital product. No physical item will be shipped. After payment, you'll receive a download link via email or platform.
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Optional: Add dynamic scarcity (e.g., "Only 53 left!")
+    // Uncomment below to show random count between 1–100
+    /*
+    const total = 100;
+    const remaining = Math.floor(Math.random() * 100) + 1;
+    if (remaining <= 100) {
+      document.querySelector('.badge').innerHTML = 
+        `🔥 HURRY! Only ${remaining} copies left at $12.99!`;
+    }
+    */
+  </script>
+
+</body>
+</html>
